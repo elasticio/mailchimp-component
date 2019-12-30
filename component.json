@@ -1,6 +1,7 @@
 {
   "title": "MailChimp",
   "description": "Online email marketing solution to manage contacts, send emails and track results.",
+  "buildType": "docker",
   "credentials": {
     "fields": {
       "apiKey": {

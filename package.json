@@ -1,6 +1,6 @@
 {
   "name": "mailchimp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "elastic.io component that connects to Mailchimp API (node.js)",
   "main": "index.js",
   "scripts": {
@@ -26,12 +26,13 @@
   "dependencies": {
     "co": "^4.6.0",
     "elasticio-node": "^0.0.8",
-    "elasticio-sailor-nodejs": "2.1.0",
+    "elasticio-sailor-nodejs": "2.5.4",
     "mailchimp-v3": "^1.0.2",
     "md5": "^2.2.1",
     "moment": "2.17.0"
   },
   "devDependencies": {
+    "@elastic.io/component-logger": "0.0.1",
     "grunt": "~1.0.1",
     "grunt-cli": "1.2.0",
     "grunt-contrib-clean": "~1.0.0",

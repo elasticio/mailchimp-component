@@ -1,4 +1,7 @@
 'use strict';
+
+const logger = require('@elastic.io/component-logger')();
+
 describe('Unsubscribe action', function () {
 
     const nock = require('nock');
@@ -8,6 +11,7 @@ describe('Unsubscribe action', function () {
 
     beforeEach(function () {
         self = jasmine.createSpyObj('self', ['emit']);
+        self.logger = logger;
     });
 
     it('should emit (data and end events on success create request - case: http 200', function () {

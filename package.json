@@ -2,7 +2,6 @@
   "name": "mailchimp",
   "version": "1.0.1",
   "description": "elastic.io component that connects to Mailchimp API (node.js)",
-  "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/grunt test"
   },

@@ -1,4 +1,7 @@
 'use strict';
+
+const logger = require('@elastic.io/component-logger')();
+
 describe('Subscribe action', function () {
 
     const nock = require('nock');
@@ -10,6 +13,7 @@ describe('Subscribe action', function () {
 
     beforeEach(function () {
         self = jasmine.createSpyObj('self', ['emit']);
+        self.logger = logger;
     });
 
     it('should emit (data and end events on success create request - case: http 200', function () {
@@ -20,12 +24,12 @@ describe('Subscribe action', function () {
                     "email_address": "foo@bar.com",
                     "status": "subscribed",
                     "merge_fields": {
-                        "EMAIL": "foo@bar.com", 
+                        "EMAIL": "foo@bar.com",
                         "FNAME": "Renat",
                         "LNAME": "Zubairov",
                         "SALUTATION": "MR",
                         "OPTIN_IP": "192.168.1.1",
-                        "OPTIN_TIME": /20/, 
+                        "OPTIN_TIME": /20/,
                         "MC_LANGUAGE": "en",
                         "MC_NOTES": "Notes"
                     },

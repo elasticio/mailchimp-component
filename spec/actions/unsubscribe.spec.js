@@ -1,45 +1,46 @@
-'use strict';
-
 const logger = require('@elastic.io/component-logger')();
 
-describe('Unsubscribe action', function () {
+const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
+const nock = require('nock');
+const sinon = require('sinon');
 
-    const nock = require('nock');
-    const action = require('../../lib/actions/unsubscribe');
+const action = require('../../lib/actions/unsubscribe');
 
-    let self;
+chai.use(chaiAsPromised);
+const { expect } = chai;
 
-    beforeEach(function () {
-        self = jasmine.createSpyObj('self', ['emit']);
-        self.logger = logger;
-    });
+describe('Subscribe action', () => {
+  let emitter;
 
-    it('should emit (data and end events on success create request - case: http 200', function () {
-        nock('https://us5.api.mailchimp.com:443', {"encodedQueryParams":true})
-            .delete('/3.0//lists/listID/members/f3ada405ce890b6f8204094deb12d8a8').reply(204);
+  beforeEach(() => {
+    emitter = {
+      emit: sinon.spy(),
+      logger,
+    };
+  });
 
-        runs(function () {
-            action.process.call(self, {
-                body: {
-                    email: 'foo@bar.com',
-                }
-            }, {
-                listId: 'listID',
-                apiKey: 'apiKey-us5'
-            }, {});
-        });
+  it('should emit (data and end events on success create request - case: http 200', async () => {
+    const msg = {
+      body: {
+        email: 'foo@bar.com',
+      },
+    };
 
-        waitsFor(function () {
-            return self.emit.calls.length;
-        });
+    const cfg = {
+      listId: 'listID',
+      apiKey: 'apiKey-us5',
+    };
 
-        runs(function () {
-            let calls = self.emit.calls;
-            expect(calls.length).toEqual(2);
-            expect(calls[0].args[0]).toEqual('data');
-            expect(calls[0].args[1].body).toEqual({});
-            expect(calls[1].args[0]).toEqual('end');
-        });
-    });
+    nock('https://us5.api.mailchimp.com:443', { encodedQueryParams: true })
+      .delete('/3.0//lists/listID/members/f3ada405ce890b6f8204094deb12d8a8').reply(204);
 
+    await action.process.call(emitter, msg, cfg, {});
+
+    const calls = emitter.emit.getCalls();
+    expect(calls.length).to.be.equal(2);
+    expect(calls[0].args[0]).to.be.equal('data');
+    expect(calls[0].args[1].body).to.be.deep.equal({});
+    expect(calls[1].args[0]).to.be.equal('end');
+  });
 });

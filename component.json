@@ -5,7 +5,7 @@
   "credentials": {
     "fields": {
       "apiKey": {
-        "viewClass": "TextFieldView",
+        "viewClass": "PasswordFieldView",
         "label": "API Key",
         "required": true,
         "placeholder": "Mailchimp API Key"

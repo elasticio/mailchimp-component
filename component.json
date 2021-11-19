@@ -1,5 +1,6 @@
 {
   "title": "MailChimp",
+  "version": "1.0.3",
   "description": "Online email marketing solution to manage contacts, send emails and track results.",
   "buildType": "docker",
   "credentials": {

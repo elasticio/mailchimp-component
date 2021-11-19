@@ -1,6 +1,5 @@
 {
   "name": "mailchimp",
-  "version": "1.0.2",
   "description": "elastic.io component that connects to Mailchimp API (node.js)",
   "scripts": {
     "pretest": "eslint verifyCredentials.js lib spec --fix",
@@ -25,7 +24,7 @@
   "homepage": "https://github.com/elasticio/mailchimp#readme",
   "dependencies": {
     "elasticio-node": "0.0.9",
-    "elasticio-sailor-nodejs": "2.6.18",
+    "elasticio-sailor-nodejs": "2.6.26",
     "mailchimp-v3": "1.0.5",
     "md5": "2.2.1",
     "moment": "2.29.1",

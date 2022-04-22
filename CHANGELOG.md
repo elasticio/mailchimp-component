@@ -1,3 +1,9 @@
+## 1.0.3 (April 26, 2022)
+
+* Upgrade to sailor 2.6.27
+* Fix dependencies
+* Added ability to set `Ansprache` field for `Add new Subscriber` action
+
 ## 1.0.2 (November 5, 2020)
 
 * Upgrade to sailor 2.6.18

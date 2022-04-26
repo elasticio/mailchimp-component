@@ -1,6 +1,7 @@
 {
   "title": "MailChimp",
   "description": "Online email marketing solution to manage contacts, send emails and track results.",
+  "version": "1.0.3",
   "credentials": {
     "fields": {
       "apiKey": {

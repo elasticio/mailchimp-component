@@ -47,6 +47,10 @@
             "title": "Notes",
             "type": "string",
             "required": false
+        },
+        "ansprache": {
+            "title": "Ansprache",
+            "type": "string"
         }
     }
 }

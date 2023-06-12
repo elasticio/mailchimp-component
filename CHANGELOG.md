@@ -1,3 +1,7 @@
+## 1.0.4 (June 12, 2022)
+* Fixed credential verification
+* Upgrade to Sailor 2.7.1
+
 ## 1.0.3 (April 27, 2022)
 
 * Upgrade to sailor 2.6.27

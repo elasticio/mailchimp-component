@@ -7,7 +7,7 @@
     "integration-test": "npm run pretest && mocha \"spec-integration/**/*spec.js\" --timeout 500000"
   },
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,7 @@
   "homepage": "https://github.com/elasticio/mailchimp#readme",
   "dependencies": {
     "@elastic.io/component-logger": "0.0.1",
-    "elasticio-node": "0.0.9",
-    "elasticio-sailor-nodejs": "2.7.1",
+    "elasticio-sailor-nodejs": "2.7.7",
     "mailchimp-v3": "1.0.5",
     "md5": "2.3.0",
     "moment": "2.29.4"

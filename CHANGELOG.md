@@ -1,3 +1,9 @@
+## 1.0.5 (January 05, 2026)
+
+* Update Sailor version to 2.7.7
+* Remove unused `elasticio-node` dependency
+* Update the Node engine to version 24.x.
+
 ## 1.0.4 (June 12, 2022)
 * Fixed credential verification
 * Upgrade to Sailor 2.7.1

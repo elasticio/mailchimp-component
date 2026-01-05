@@ -1,0 +1,26 @@
+{
+  "GHSA-869p-cjfg-cm3x": {
+    "active": true,
+    "notes": "jws is a transitive dependency via jsonwebtoken, and we don't use verify function from jsonwebtoken, so not affected"
+  },
+  "GHSA-wrvr-8mpx-r7pp": {
+    "active": true,
+    "notes": "mime ReDoS vulnerability - transitive dependency, waiting on upstream libraries to upgrade"
+  },
+  "GHSA-f8q6-p94x-37v3": {
+    "active": true,
+    "notes": "minimatch ReDoS vulnerability - transitive dependency, waiting on upstream libraries to upgrade"
+  },
+  "GHSA-gqgv-6jq5-jjj9": {
+    "active": true,
+    "notes": "qs Prototype Pollution Protection Bypass - transitive dependency via superagent, waiting on upstream libraries to upgrade"
+  },
+  "GHSA-hrpp-h998-j3pp": {
+    "active": true,
+    "notes": "qs Prototype Pollution - transitive dependency via superagent, waiting on upstream libraries to upgrade"
+  },
+  "GHSA-6rw7-vpxm-498p": {
+    "active": true,
+    "notes": "qs arrayLimit bypass DoS - transitive dependency via superagent, waiting on upstream libraries to upgrade"
+  }
+}

@@ -3,6 +3,7 @@
   "version": "1.1.0-dev.1",
   "description": "elastic.io component that connects to Mailchimp API (node.js)",
   "scripts": {
+    "audit": "better-npm-audit audit --level high --production",
     "pretest": "eslint verifyCredentials.js lib spec --fix",
     "test": "mocha spec/** --timeout 50000",
     "integration-test": "npm run pretest && mocha \"spec-integration/**/*spec.js\" --timeout 500000"
@@ -31,6 +32,7 @@
     "moment": "2.30.1"
   },
   "devDependencies": {
+    "better-npm-audit": "3.7.3",
     "chai": "^4.5.0",
     "chai-as-promised": "^7.1.2",
     "dotenv": "^17.4.2",

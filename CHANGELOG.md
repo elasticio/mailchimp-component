@@ -1,3 +1,10 @@
+## 1.1.0 (April 17, 2026)
+* Added dynamic metadata for `Add new Subscriber` action to support list-specific merge fields.
+* Upgraded dependencies to latest stable versions:
+    * `elasticio-sailor-nodejs`: 2.7.1 -> 2.7.8
+    * `moment`: 2.29.4 -> 2.30.1
+* Removed `elasticio-node` dependency and replaced it with a local utility.
+
 ## 1.0.4 (June 12, 2022)
 * Fixed credential verification
 * Upgrade to Sailor 2.7.1

@@ -22,7 +22,6 @@ describe('Subscribe action', () => {
     };
   });
 
-
   it('should emit (data and end events on success create request - case: http 200', async () => {
     const msg = {
       body: {
@@ -41,7 +40,8 @@ describe('Subscribe action', () => {
     };
 
     nock('https://us5.api.mailchimp.com', { encodedQueryParams: true })
-      .put('/3.0//lists/listID/members/f3ada405ce890b6f8204094deb12d8a8',
+      .put(
+        '/3.0//lists/listID/members/f3ada405ce890b6f8204094deb12d8a8',
         {
           id: 'listID',
           email_address: 'foo@bar.com',
@@ -58,7 +58,8 @@ describe('Subscribe action', () => {
           },
           email_type: 'html',
           ip_opt: '192.168.1.1',
-        }).reply(200, memberPutReply);
+        },
+      ).reply(200, memberPutReply);
 
     await action.process.call(emitter, msg, cfg, {});
 

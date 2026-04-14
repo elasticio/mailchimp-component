@@ -1,7 +1,7 @@
 {
   "title": "MailChimp",
   "description": "Online email marketing solution to manage contacts, send emails and track results.",
-  "version": "1.0.4",
+  "version": "1.1.0-dev.1",
   "credentials": {
     "fields": {
       "apiKey": {
@@ -25,10 +25,7 @@
           "model": "getLists"
         }
       },
-      "metadata": {
-        "in": "./schemas/subscribe.in.json",
-        "out": "./schemas/subscribe.out.json"
-      }
+      "dynamicMetadata": true
     },
     "unsubscribe": {
       "main": "./lib/actions/unsubscribe.js",

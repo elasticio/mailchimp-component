@@ -5,7 +5,6 @@
     * `moment`: 2.29.4 -> 2.30.1
 * Removed `elasticio-node` dependency and replaced it with a local utility.
 * Integrated latest security fixes and `better-npm-audit`.
-* Updated Node engine to version 24.x.
 
 ## 1.0.5 (January 05, 2026)
 * Update Sailor version to 2.7.7

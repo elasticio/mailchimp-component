@@ -1,6 +1,6 @@
 # Mailchimp Component
 
-A robust [elastic.io](https://elastic.io) connector designed to interface seamlessly with the Mailchimp API (v3.0). This component allows you to manage subscribers, handle unsubscriptions, and sync eCommerce customer data.
+A robust connector designed to interface seamlessly with the Mailchimp API (v3.0). This component allows you to manage subscribers, handle unsubscriptions, and sync eCommerce customer data.
 
 ## Actions
 

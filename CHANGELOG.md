@@ -1,6 +1,6 @@
 ## 2.0.0 (April 21, 2026)
 * Added dynamic metadata for `Add new Subscriber` action to support list-specific merge fields.
-* **ATTENTION**: Upgrading will reset the configuration for the `Add New Subscriber` action. Please document your current field mappings before upgrading, as you will need to re-map them to the new dynamic merge fields.
+* **ATTENTION**: Moving to the dynamic metadata might break existing flow mapping. Please check your flows after upgrading.
 * Upgraded dependencies to latest stable versions:
     * `elasticio-sailor-nodejs`: 2.7.1 -> 2.7.8
     * `moment`: 2.29.4 -> 2.30.1

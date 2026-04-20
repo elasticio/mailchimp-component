@@ -1,6 +1,5 @@
 {
   "name": "mailchimp",
-  "version": "1.1.0-dev.1",
   "description": "elastic.io component that connects to Mailchimp API (node.js)",
   "scripts": {
     "audit": "better-npm-audit audit --level high --production",

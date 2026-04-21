@@ -16,8 +16,7 @@
   },
   "keywords": [
     "elasticio",
-    "salesforce",
-    "REST"
+    "mailchimp"
   ],
   "author": "elastic.io GmbH",
   "bugs": {
@@ -26,21 +25,21 @@
   "homepage": "https://github.com/elasticio/mailchimp#readme",
   "dependencies": {
     "@elastic.io/component-logger": "0.0.1",
-    "elasticio-sailor-nodejs": "2.7.7",
+    "elasticio-sailor-nodejs": "2.7.8",
     "mailchimp-v3": "1.0.5",
     "md5": "2.3.0",
-    "moment": "2.29.4"
+    "moment": "2.30.1"
   },
   "devDependencies": {
-    "chai": "4.2.0",
-    "chai-as-promised": "7.1.1",
     "better-npm-audit": "3.7.3",
-    "eslint": "5.16.0",
-    "dotenv": "16.0.0",
-    "sinon": "7.3.2",
-    "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "2.17.3",
-    "mocha": "8.2.0",
-    "nock": "13.3.1"
+    "chai": "^4.5.0",
+    "chai-as-promised": "^7.1.2",
+    "dotenv": "^17.4.2",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "mocha": "^11.7.5",
+    "nock": "^14.0.12",
+    "sinon": "^21.1.2"
   }
 }
